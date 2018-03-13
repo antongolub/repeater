@@ -1,5 +1,5 @@
 {
-  "name": "repeater",
+  "name": "@antongolub/repeater",
   "version": "1.0.0",
   "description": "Helper for creating repetitive functions",
   "main": "dist/index.js",
@@ -85,7 +85,8 @@
       "before",
       "after",
       "afterEach",
-      "beforeEach"
+      "beforeEach",
+      "TimeoutID"
     ],
     "rules": {
       "use-flow-type": 1
