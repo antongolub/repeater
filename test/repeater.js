@@ -23,7 +23,7 @@ describe('repeater', () => {
     const delay = 10
     function target (step) {
       this.i += step
-      if (this.i > 5) {
+      if (this.i === 6) {
         done()
       }
     }
@@ -35,5 +35,24 @@ describe('repeater', () => {
 
   it('throws error if delay is empty', () => {
     expect(() => repeater(() => {}, 0)).to.throw('repeater: delay must not be empty')
+  })
+
+  it('allows to combine `manual` and `automated` flows', (done) => {
+    const context = {
+      i: 0
+    }
+    const delay = 10
+    function target (step) {
+      this.i += step
+    }
+
+    const rep = repeater(target, delay, context)
+    rep(1)
+
+    setTimeout(() => rep(4), 20)
+    setTimeout(() => {
+      expect(context.i).to.be.above(9)
+      done()
+    }, 40)
   })
 })

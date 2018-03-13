@@ -7,6 +7,13 @@ Helper for creating repetitive functions.
 [![dependencyStatus](https://img.shields.io/david/antongolub/repeater.svg?maxAge=3600)](https://david-dm.org/antongolub/repeater)
 [![devDependencyStatus](https://img.shields.io/david/dev/antongolub/repeater.svg?maxAge=3600)](https://david-dm.org/antongolub/repeater)
 
+##### Motivation
+The wheel was invented a long time ago: [repeat](https://www.npmjs.com/package/repeat).
+What's the diff?
+* Repeater stores the last call params and uses them for next invocations.
+* Inherits target's iface.
+* Allows to combine `manual` and `automated` calls.
+
 ##### Usage
 ```javascript
     import repeater from '@antongolub/repeater'
@@ -23,8 +30,11 @@ Helper for creating repetitive functions.
     
     rep(2)
     
-    // ~10 seconds later
-    console.log(context.i) // 20
+    // Imagine, 5 seconds later new 'manual' call occurs
+    setTimeout(() => rep(1), 5000)
+
+    // ~10 seconds after start: 
+    setTimeout(() => console.log(context.i), 10000) // 15
 ```
 
 Repeater is just a wrapper around the target function. It exposes several util props:
@@ -32,7 +42,7 @@ Repeater is just a wrapper around the target function. It exposes several util p
 * timeout — TimeoutID
 * target — ref for original target function
 * context — optional scope
-* args — arguments for the last invocation
+* args — arguments of the last invocation
 
 So, anytime you're let to interrupt the repetitive call by clearing timeout:
 ```javascript
