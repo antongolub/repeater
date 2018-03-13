@@ -1,6 +1,5 @@
 # repeater
-Helper for creating repetitive functions
-
+Helper for creating repetitive functions.
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![buildStatus](https://img.shields.io/travis/antongolub/repeater.svg?maxAge=60000&branch=master)](https://travis-ci.org/antongolub/repeater)
 [![Coveralls](https://img.shields.io/coveralls/antongolub/repeater.svg?maxAge=60000)](https://coveralls.io/github/antongolub/repeater)
@@ -26,4 +25,16 @@ Helper for creating repetitive functions
     // ~10 seconds later
     console.log(context.i) // 20
 ```
+
+Repeater is just a wrapper around the target function. It exposes several util props:
+* delay — interval in ms
+* timeout — TimeoutID
+* target — ref for original target function
+* context — optional scope
+* args — arguments for the last invocation
+
+So, anytime you're let to interrupt the repetitive call by clearing timeout:
+```javascript
+    clearTimeout(rep.timeout)
+``` 
 
