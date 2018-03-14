@@ -1,5 +1,5 @@
 {
-  "name": "repeater",
+  "name": "@antongolub/repeater",
   "version": "1.0.2",
   "lockfileVersion": 1,
   "requires": true,
@@ -2823,6 +2823,11 @@
         "babel-plugin-syntax-jsx": "6.8.0",
         "babel-plugin-transform-flow-strip-types": "6.8.0"
       }
+    },
+    "esdoc-flow-type-plugin": {
+      "version": "1.0.1",
+      "resolved": "https://registry.npmjs.org/esdoc-flow-type-plugin/-/esdoc-flow-type-plugin-1.0.1.tgz",
+      "integrity": "sha1-CBOVHGhopyi+a6rfAnjl0HCFFHk="
     },
     "esdoc-integrate-manual-plugin": {
       "version": "1.0.0",
