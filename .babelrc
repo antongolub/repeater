@@ -4,9 +4,10 @@
     ["@babel/preset-env",{
       "shippedProposals": true,
       "targets": {
-        "node": "9.4.0"
+        "browsers": ["last 2 versions"]
       }
-    }]
+    }],
+    "minify"
   ],
   "plugins": [
     "transform-class-properties"
