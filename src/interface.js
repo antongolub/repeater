@@ -2,9 +2,15 @@
 
 export type IAny = any
 
-export type ITarget = {
-  (...args: any): any
+export type IHandler = (...args: any) => any
+
+export type IOpts = {
+  target: IHandler,
+  delay: number,
+  context?: ?IAny
 }
+
+export type ITarget = IHandler | IOpts
 
 export type IRepeater = {
   (...args: any): any;

@@ -3,7 +3,8 @@
 import type {
   IAny,
   IRepeater,
-  ITarget
+  ITarget,
+  IOpts
 } from './interface'
 
 /**
@@ -12,13 +13,23 @@ import type {
  * @param {number} delay
  * @param {*} [context]
  * @return {IRepeater}
- * @property {Function} target
+ * @property {Function/IOpts} target
  * @property {number} delay
  * @property {*} context
  * @property {Array<*>} [args] arguments of the last invocation
  * @property {number} [timeout] TimeoutID
  */
 export default function createRepeater (target: ITarget, delay: number, context: ?IAny): IRepeater {
+  if (typeof target === 'object') {
+    const {target: _target, delay, context}: IOpts = target
+
+    return createRepeater(_target, delay, context)
+  }
+
+  if (typeof target !== 'function') {
+    throw new Error('repeater: target must be callable')
+  }
+
   if (!delay) {
     throw new Error('repeater: delay must not be empty')
   }
