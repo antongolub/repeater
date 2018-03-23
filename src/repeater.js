@@ -4,7 +4,8 @@ import type {
   IAny,
   IRepeater,
   ITarget,
-  IOpts
+  IOpts,
+  ILimit
 } from './interface'
 
 /**
@@ -12,6 +13,7 @@ import type {
  * @param {Function} target
  * @param {number} delay
  * @param {*} [context]
+ * @param {number} [limit]
  * @return {IRepeater}
  * @property {Function/IOpts} target
  * @property {number} delay
@@ -19,11 +21,11 @@ import type {
  * @property {Array<*>} [args] arguments of the last invocation
  * @property {number} [timeout] TimeoutID
  */
-export default function createRepeater (target: ITarget, delay: number, context: ?IAny): IRepeater {
+export default function createRepeater (target: ITarget, delay: number, context: ?IAny, limit?: ?ILimit): IRepeater {
   if (typeof target === 'object') {
-    const {target: _target, delay, context}: IOpts = target
+    const {target: _target, delay, context, limit}: IOpts = target
 
-    return createRepeater(_target, delay, context)
+    return createRepeater(_target, delay, context, limit)
   }
 
   if (typeof target !== 'function') {
@@ -35,16 +37,26 @@ export default function createRepeater (target: ITarget, delay: number, context:
   }
 
   const repeater = (...args): IAny => {
-    clearTimeout(repeater.timeout)
+    const {timeout, target, limit, context}: IRepeater = repeater
+    let nextLimit
+    clearTimeout(timeout)
 
-    repeater.args = args
-    repeater.timeout = setTimeout(repeater.bind(repeater, ...args), delay)
+    if (typeof limit === 'number') {
+      nextLimit = limit - 1
+    }
 
-    return repeater.target.call(context, ...args)
+    if (nextLimit === undefined || nextLimit > 0) {
+      repeater.limit = nextLimit
+      repeater.args = args
+      repeater.timeout = setTimeout(repeater.bind(repeater, ...args), delay)
+    }
+
+    return target.call(context, ...args)
   }
 
   repeater.target = target
   repeater.delay = delay
+  repeater.limit = limit
   repeater.context = context
 
   return repeater

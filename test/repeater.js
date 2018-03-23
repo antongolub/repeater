@@ -13,7 +13,7 @@ describe('repeater', () => {
     expect(rep.delay).toEqual(delay)
   })
 
-  it('repeats target fn every `delay` ms with initial args', (done) => {
+  it('repeats target fn every `delay` ms with initial args', done => {
     const context = {
       i: 0
     }
@@ -38,7 +38,7 @@ describe('repeater', () => {
     expect(() => repeater(1, 1000)).toThrow('repeater: target must be callable')
   })
 
-  it('allows to combine `manual` and `automated` flows', (done) => {
+  it('allows to combine `manual` and `automated` flows', done => {
     const context = {
       i: 0
     }
@@ -55,6 +55,26 @@ describe('repeater', () => {
       expect(context.i > 9).toBeTruthy()
       done()
     }, 40)
+  })
+
+  it('repeats handler until the limit is reached', done => {
+    const context = {
+      i: 0
+    }
+    const limit = 2
+    const delay = 5
+    function target (step) {
+      this.i += step
+    }
+
+    const rep = repeater(target, delay, context, limit)
+
+    setTimeout(() => {
+      expect(context.i === 2).toBeTruthy()
+      done()
+    }, 20)
+
+    rep(1)
   })
 
   it('supports option interface', () => {
