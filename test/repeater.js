@@ -1,7 +1,4 @@
-import chai from 'chai'
 import repeater from '../src/repeater'
-
-const { expect } = chai
 
 describe('repeater', () => {
   it('properly wraps target', () => {
@@ -10,10 +7,10 @@ describe('repeater', () => {
     const delay = 1000000
     const rep = repeater(target, delay, context)
 
-    expect(rep).to.be.a('function')
-    expect(rep.target).to.equal(target)
-    expect(rep.context).to.equal(context)
-    expect(rep.delay).to.equal(delay)
+    expect(rep).toEqual(expect.any(Function))
+    expect(rep.target).toEqual(target)
+    expect(rep.context).toEqual(context)
+    expect(rep.delay).toEqual(delay)
   })
 
   it('repeats target fn every `delay` ms with initial args', (done) => {
@@ -34,11 +31,11 @@ describe('repeater', () => {
   })
 
   it('throws error if delay is empty', () => {
-    expect(() => repeater(() => {}, 0)).to.throw('repeater: delay must not be empty')
+    expect(() => repeater(() => {}, 0)).toThrow('repeater: delay must not be empty')
   })
 
   it('throws error if target is not callable', () => {
-    expect(() => repeater(1, 1000)).to.throw('repeater: target must be callable')
+    expect(() => repeater(1, 1000)).toThrow('repeater: target must be callable')
   })
 
   it('allows to combine `manual` and `automated` flows', (done) => {
@@ -55,7 +52,7 @@ describe('repeater', () => {
 
     setTimeout(() => rep(4), 20)
     setTimeout(() => {
-      expect(context.i).to.be.above(9)
+      expect(context.i > 9).toBeTruthy()
       done()
     }, 40)
   })
@@ -66,9 +63,9 @@ describe('repeater', () => {
     const delay = 1000000
     const rep = repeater({target, delay, context})
 
-    expect(rep).to.be.a('function')
-    expect(rep.target).to.equal(target)
-    expect(rep.context).to.equal(context)
-    expect(rep.delay).to.equal(delay)
+    expect(rep).toEqual(expect.any(Function))
+    expect(rep.target).toEqual(target)
+    expect(rep.context).toEqual(context)
+    expect(rep.delay).toEqual(delay)
   })
 })
