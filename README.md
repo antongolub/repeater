@@ -1,4 +1,6 @@
 # repeater
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/antongolub/repeater.svg)](https://greenkeeper.io/)
 Helper for creating repetitive functions.
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
