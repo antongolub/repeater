@@ -28,13 +28,7 @@ export default function createRepeater (target: ITarget, delay: number, context:
     return createRepeater(_target, delay, context, limit)
   }
 
-  if (typeof target !== 'function') {
-    throw new Error('repeater: target must be callable')
-  }
-
-  if (!delay) {
-    throw new Error('repeater: delay must not be empty')
-  }
+  assert(target, delay)
 
   const repeater = (...args): IAny => {
     const {timeout, target, limit, context}: IRepeater = repeater
@@ -60,4 +54,14 @@ export default function createRepeater (target: ITarget, delay: number, context:
   repeater.context = context
 
   return repeater
+}
+
+function assert (target: ITarget, delay: number): void {
+  if (typeof target !== 'function') {
+    throw new Error('repeater: target must be callable')
+  }
+
+  if (!delay) {
+    throw new Error('repeater: delay must not be empty')
+  }
 }
