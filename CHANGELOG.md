@@ -1,3 +1,11 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/antongolub/repeater/compare/v1.1.1...v1.1.2) (2018-04-22)
+
+
+### Bug Fixes
+
+* sync versions ([828a5e6](https://github.com/antongolub/repeater/commit/828a5e6))
+
 # Change Log
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.

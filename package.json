@@ -1,6 +1,6 @@
 {
   "name": "@antongolub/repeater",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Helper for creating repetitive functions",
   "main": "dist/index.js",
   "@std/esm": {
