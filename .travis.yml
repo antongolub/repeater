@@ -1,14 +1,13 @@
 language: node_js
 node_js:
   - '9'
-before_install:
-  - npm install -g nyc
-  - npm install -g mocha
+
 install:
   - npm install
   - npm run build
+
 script:
-  - npm run coveralls
+  - npm run test_with_report
 
 deploy:
   provider: script
