@@ -1,6 +1,6 @@
 {
   "name": "@antongolub/repeater",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Helper for creating repetitive functions",
   "main": "dist/index.js",
   "@std/esm": {
@@ -70,6 +70,23 @@
     "CHANGELOG.md",
     "dist/"
   ],
+  "release": {
+    "branch": "master",
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "publish": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  },
   "jest": {
     "collectCoverage": true,
     "coveragePathIgnorePatterns": [
