@@ -32,12 +32,9 @@ export default function createRepeater (target: ITarget, delay: number, context:
 
   const repeater = (...args): IAny => {
     const {timeout, target, limit, context}: IRepeater = repeater
-    let nextLimit
-    clearTimeout(timeout)
+    const nextLimit = getNextLimit(limit)
 
-    if (typeof limit === 'number') {
-      nextLimit = limit - 1
-    }
+    clearTimeout(timeout)
 
     if (nextLimit === undefined || nextLimit > 0) {
       repeater.limit = nextLimit
@@ -64,4 +61,10 @@ function assert (target: ITarget, delay: number): void {
   if (!delay) {
     throw new Error('repeater: delay must not be empty')
   }
+}
+
+function getNextLimit (limit: ?number): number | void {
+  return typeof limit === 'number'
+    ? limit - 1
+    : undefined
 }
