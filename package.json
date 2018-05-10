@@ -12,7 +12,7 @@
     "flow_coverage": "flow-coverage-report -i 'src/**/*.js' -t html -t json -t text --threshold 90",
     "build": "BABEL_ENV=production babel src --out-dir dist",
     "lint": "standard src/**/*.js test/**/*.js",
-    "jest": "jest -w 2",
+    "jest": "jest -w 1 --forceExit",
     "test": "npm run flow && npm run flow_coverage && npm run lint && npm run jest",
     "doc": "esdoc",
     "test_with_report": "npm test && npm run codeclimate_push && npm run coveralls_push",
@@ -61,7 +61,6 @@
     "flow-coverage-report": "^0.5.0",
     "flow-remove-types": "^1.2.3",
     "jest": "^22.4.3",
-    "npm": "^6.0.0",
     "semantic-release": "^15.1.7",
     "standard": "^11.0.1"
   },
@@ -88,6 +87,7 @@
     ]
   },
   "jest": {
+    "testEnvironment": "node",
     "collectCoverage": true,
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/interface.js"
