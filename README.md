@@ -21,14 +21,9 @@ What's the diff?
 ```javascript
     import repeater from '@antongolub/repeater'
     
-    const context = {
-      i: 0
-    }
+    const target = step => { this.i += step }
+    const context = { i: 0 }
     const delay = 1000
-    function target (step) {
-      this.i += step
-    }
-
     const rep = repeater(target, delay, context)
     
     rep(2)

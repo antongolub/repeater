@@ -39,15 +39,11 @@ describe('repeater', () => {
   })
 
   it('allows to combine `manual` and `automated` flows', done => {
-    const context = {
-      i: 0
-    }
+    function target (step) { this.i += step }
+    const context = { i: 0 }
     const delay = 10
-    function target (step) {
-      this.i += step
-    }
-
     const rep = repeater(target, delay, context)
+
     rep(1)
 
     setTimeout(() => rep(4), 20)
