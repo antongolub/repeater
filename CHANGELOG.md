@@ -1,3 +1,11 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/antongolub/repeater/compare/v1.1.2...v1.2.0) (2018-05-16)
+
+
+### Features
+
+* add `flow` libdefs to package ([8bf8361](https://github.com/antongolub/repeater/commit/8bf8361))
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/antongolub/repeater/compare/v1.1.1...v1.1.2) (2018-04-22)
 
