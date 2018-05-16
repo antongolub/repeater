@@ -67,7 +67,8 @@
   "files": [
     "README.md",
     "CHANGELOG.md",
-    "dist/"
+    "dist/",
+    "flow-typed/libdef.js"
   ],
   "release": {
     "branch": "master",
