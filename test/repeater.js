@@ -11,6 +11,8 @@ describe('repeater', () => {
     expect(rep.target).toEqual(target)
     expect(rep.context).toEqual(context)
     expect(rep.delay).toEqual(delay)
+
+    clearTimeout(rep.timeout)
   })
 
   it('repeats target fn every `delay` ms with initial args', done => {
@@ -21,6 +23,7 @@ describe('repeater', () => {
     function target (step) {
       this.i += step
       if (this.i === 6) {
+        clearTimeout(rep.timeout)
         done()
       }
     }
@@ -49,6 +52,7 @@ describe('repeater', () => {
     setTimeout(() => rep(4), 20)
     setTimeout(() => {
       expect(context.i > 9).toBeTruthy()
+      clearTimeout(rep.timeout)
       done()
     }, 40)
   })
@@ -66,6 +70,7 @@ describe('repeater', () => {
     const rep = repeater(target, delay, context, limit)
 
     setTimeout(() => {
+      clearTimeout(rep.timeout)
       expect(context.i === 2).toBeTruthy()
       done()
     }, 20)
@@ -73,7 +78,7 @@ describe('repeater', () => {
     rep(1)
   })
 
-  it('supports option interface', () => {
+  it('supports configuring through opts literal', () => {
     const target = () => {}
     const context = {}
     const delay = 1000000
@@ -83,5 +88,7 @@ describe('repeater', () => {
     expect(rep.target).toEqual(target)
     expect(rep.context).toEqual(context)
     expect(rep.delay).toEqual(delay)
+
+    clearTimeout(rep.timeout)
   })
 })
