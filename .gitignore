@@ -20,6 +20,9 @@ coverage
 # Bundle
 build
 dist
+lib
+target
+bundle
 
 #Docs
 docs

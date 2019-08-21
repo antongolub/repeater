@@ -2,16 +2,16 @@
   "name": "@antongolub/repeater",
   "version": "1.2.0",
   "description": "Helper for creating repetitive functions",
-  "main": "dist/index.js",
+  "main": "target/es5/index.js",
   "@std/esm": {
     "mode": "all",
     "cjs": true
   },
   "scripts": {
     "flow": "flow",
-    "flow_coverage": "flow-coverage-report -i 'src/**/*.js' -t html -t json -t text --threshold 90",
-    "build": "BABEL_ENV=production babel src --out-dir dist",
-    "lint": "standard src/**/*.js test/**/*.js",
+    "flow_coverage": "flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90",
+    "build": "BABEL_ENV=production babel src/main/js --out-dir target/es5",
+    "lint": "standard src/**/*.js",
     "jest": "jest -w 2 --detectOpenHandles",
     "test": "npm run flow && npm run flow_coverage && npm run lint && npm run jest",
     "doc": "esdoc",
@@ -67,7 +67,7 @@
   "files": [
     "README.md",
     "CHANGELOG.md",
-    "dist/",
+    "target/es5/",
     "flow-typed/libdef.js"
   ],
   "release": {
@@ -91,13 +91,13 @@
     "testEnvironment": "node",
     "collectCoverage": true,
     "coveragePathIgnorePatterns": [
-      "<rootDir>/src/interface.js"
+      "<rootDir>/src/main/js/interface.js"
     ],
     "collectCoverageFrom": [
-      "<rootDir>/src/**/*.js"
+      "<rootDir>/src/main/**/*.js"
     ],
     "testMatch": [
-      "<rootDir>/test/**/*.js"
+      "<rootDir>/src/test/**/*.js"
     ]
   },
   "standard": {

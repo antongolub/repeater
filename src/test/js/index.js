@@ -1,4 +1,4 @@
-import repeater from '../src'
+import repeater from '../../main/js'
 
 describe('index', () => {
   it('exports repeater as default', () => {
