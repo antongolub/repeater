@@ -3,10 +3,11 @@
 Helper for creating repetitive functions.
 
 [![buildStatus](https://img.shields.io/travis/antongolub/repeater.svg?maxAge=3600&branch=master)](https://travis-ci.org/antongolub/repeater)
-[![Coveralls](https://img.shields.io/coveralls/antongolub/repeater.svg?maxAge=3600)](https://coveralls.io/github/antongolub/repeater)
+[![npm (tag)](https://img.shields.io/npm/v/@antongolub/repeater/latest.svg)](https://www.npmjs.com/package/@antongolub/repeater)
 [![dependencyStatus](https://img.shields.io/david/antongolub/repeater.svg?maxAge=3600)](https://david-dm.org/antongolub/repeater)
 [![devDependencyStatus](https://img.shields.io/david/dev/antongolub/repeater.svg?maxAge=3600)](https://david-dm.org/antongolub/repeater)
-[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/antongolub/repeater)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c63a84dc4cda2e67e2c3/maintainability)](https://codeclimate.com/github/antongolub/repeater/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c63a84dc4cda2e67e2c3/test_coverage)](https://codeclimate.com/github/antongolub/repeater/test_coverage)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![Greenkeeper badge](https://badges.greenkeeper.io/antongolub/repeater.svg)](https://greenkeeper.io/)
 
