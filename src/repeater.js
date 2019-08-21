@@ -23,7 +23,7 @@ import type {
  */
 export default function createRepeater (target: ITarget, delay: number, context: ?IAny, limit?: ?ILimit): IRepeater {
   if (typeof target === 'object') {
-    const {target: _target, delay, context, limit}: IOpts = target
+    const { target: _target, delay, context, limit }: IOpts = target
 
     return createRepeater(_target, delay, context, limit)
   }
@@ -31,7 +31,7 @@ export default function createRepeater (target: ITarget, delay: number, context:
   assert(target, delay)
 
   const repeater = (...args): IAny => {
-    const {timeout, target, limit, context}: IRepeater = repeater
+    const { timeout, target, limit, context }: IRepeater = repeater
     const nextLimit = getNextLimit(limit)
 
     clearTimeout(timeout)

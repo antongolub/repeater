@@ -82,7 +82,7 @@ describe('repeater', () => {
     const target = () => {}
     const context = {}
     const delay = 1000000
-    const rep = repeater({target, delay, context})
+    const rep = repeater({ target, delay, context })
 
     expect(rep).toEqual(expect.any(Function))
     expect(rep.target).toEqual(target)
