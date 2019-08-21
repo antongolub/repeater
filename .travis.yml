@@ -12,7 +12,7 @@ install:
   - npm run build
 
 script:
-  - npm run test_with_report
+  - npm run test:report
 
 deploy:
   provider: script
