@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/antongolub/repeater/compare/v1.2.0...v1.2.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* **deps:** up deps, fix vulnerbilities ([dd5deae](https://github.com/antongolub/repeater/commit/dd5deaed47acee12c45e924eebca99ba32e5742d))
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/antongolub/repeater/compare/v1.1.2...v1.2.0) (2018-05-16)
 
