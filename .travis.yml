@@ -1,11 +1,6 @@
 language: node_js
 node_js:
-  - '10'
-
-before_install:
-  - npm install -g greenkeeper-lockfile
-before_script: greenkeeper-lockfile-update
-after_script: greenkeeper-lockfile-upload
+  - '12'
 
 install:
   - npm install
@@ -18,4 +13,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-    - npx semantic-release
+    - semantic-release

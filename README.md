@@ -9,7 +9,6 @@ Helper for creating auto-calling functions
 [![Maintainability](https://api.codeclimate.com/v1/badges/c63a84dc4cda2e67e2c3/maintainability)](https://codeclimate.com/github/antongolub/repeater/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c63a84dc4cda2e67e2c3/test_coverage)](https://codeclimate.com/github/antongolub/repeater/test_coverage)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
-[![Greenkeeper badge](https://badges.greenkeeper.io/antongolub/repeater.svg)](https://greenkeeper.io/)
 
 ##### Motivation
 The wheel was invented a long time ago: [repeat](https://www.npmjs.com/package/repeat).
