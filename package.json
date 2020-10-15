@@ -1,8 +1,12 @@
 {
   "name": "@antongolub/repeater",
   "version": "1.2.1",
-  "description": "Helper for creating repetitive functions",
+  "description": "Helper for creating auto-calling functions",
   "main": "target/es5/index.js",
+  "types": "typings/index.d.ts",
+  "typescript": {
+    "definition": "typings/index.d.ts"
+  },
   "@std/esm": {
     "mode": "all",
     "cjs": true
@@ -69,7 +73,8 @@
     "README.md",
     "CHANGELOG.md",
     "target",
-    "flow-typed/libdef.js"
+    "flow-typed",
+    "typings"
   ],
   "release": {
     "branch": "master",

@@ -1,6 +1,6 @@
 # repeater
 
-Helper for creating repetitive functions.
+Helper for creating auto-calling functions
 
 [![buildStatus](https://img.shields.io/travis/antongolub/repeater.svg?maxAge=3600&branch=master)](https://travis-ci.org/antongolub/repeater)
 [![npm (tag)](https://img.shields.io/npm/v/@antongolub/repeater/latest.svg)](https://www.npmjs.com/package/@antongolub/repeater)
