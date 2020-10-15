@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/antongolub/repeater/compare/v1.2.1...v1.3.0) (2020-10-15)
+
+
+### Features
+
+* add ts typings ([bcb9df3](https://github.com/antongolub/repeater/commit/bcb9df3b4daa99ba98b5f51d7ba2ce6bb32a8296))
+
 ## [1.2.1](https://github.com/antongolub/repeater/compare/v1.2.0...v1.2.1) (2020-10-12)
 
 
