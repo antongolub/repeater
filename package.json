@@ -67,7 +67,7 @@
     "flow-remove-types": "^2.135.0",
     "jest": "^26.5.3",
     "semantic-release": "^17.2.1",
-    "standard": "^14.3.4"
+    "standard": "^15.0.0"
   },
   "files": [
     "README.md",
