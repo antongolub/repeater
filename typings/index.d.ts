@@ -25,7 +25,7 @@ declare module '@antongolub/repeater' {
 
   export type ILibrary = (target: ITarget, delay?: number, context?: IAny, limit?: ILimit) => IRepeater
 
-  export const repeat: ILibrary
+  export const repeater: ILibrary
 
-  export default repeat
+  export default repeater
 }
