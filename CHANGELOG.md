@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/antongolub/repeater/compare/v1.3.0...v1.4.0) (2020-11-06)
+
+
+### Features
+
+* export repeater as named const ([883caa8](https://github.com/antongolub/repeater/commit/883caa80218b83b1835c59227cc6af19df291e3e))
+
 # [1.3.0](https://github.com/antongolub/repeater/compare/v1.2.1...v1.3.0) (2020-10-15)
 
 
