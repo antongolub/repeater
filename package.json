@@ -7,10 +7,6 @@
   "typescript": {
     "definition": "typings/index.d.ts"
   },
-  "@std/esm": {
-    "mode": "all",
-    "cjs": true
-  },
   "scripts": {
     "flow": "flow",
     "flow:coverage": "flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90",
