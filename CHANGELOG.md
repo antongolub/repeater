@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/antongolub/repeater/compare/v1.4.0...v1.4.1) (2021-08-19)
+
+
+### Bug Fixes
+
+* **pkg:** add missed eslint dev dep ([d5ea797](https://github.com/antongolub/repeater/commit/d5ea79735c2cee63aeb9a2d1881115bda9f4cc4a))
+* update deps, fix some vuls ([5e8d6ff](https://github.com/antongolub/repeater/commit/5e8d6ffd9ed7395b298130edd8d29ca4abf0c435))
+
 # [1.4.0](https://github.com/antongolub/repeater/compare/v1.3.0...v1.4.0) (2020-11-06)
 
 
