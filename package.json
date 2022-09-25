@@ -60,7 +60,7 @@
     "flow-bin": "^0.158.0",
     "flow-coverage-report": "^0.8.0",
     "flow-remove-types": "^2.158.0",
-    "jest": "^27.0.6",
+    "jest": "^29.0.0",
     "standard": "^16.0.3"
   },
   "files": [
