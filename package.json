@@ -57,7 +57,7 @@
     "esdoc-flow-type-plugin": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",
     "eslint-plugin-flowtype": "^6.0.0",
-    "flow-bin": "^0.158.0",
+    "flow-bin": "^0.193.0",
     "flow-coverage-report": "^0.8.0",
     "flow-remove-types": "^2.158.0",
     "jest": "^27.0.6",
