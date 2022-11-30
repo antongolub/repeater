@@ -1,7 +1,7 @@
 # repeater
 > Helper for creating auto-calling functions
 
-[![buildStatus](https://img.shields.io/travis/antongolub/repeater.svg?maxAge=3600&branch=master)](https://travis-ci.org/antongolub/repeater)
+[![Build Status](https://app.travis-ci.com/antongolub/repeater.svg?branch=master)](https://app.travis-ci.com/antongolub/repeater)
 [![npm (tag)](https://img.shields.io/npm/v/@antongolub/repeater/latest.svg)](https://www.npmjs.com/package/@antongolub/repeater)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c63a84dc4cda2e67e2c3/maintainability)](https://codeclimate.com/github/antongolub/repeater/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c63a84dc4cda2e67e2c3/test_coverage)](https://codeclimate.com/github/antongolub/repeater/test_coverage)
