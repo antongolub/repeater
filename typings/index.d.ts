@@ -27,5 +27,7 @@ declare module '@antongolub/repeater' {
 
   export const repeater: ILibrary
 
+  export const createRepeater: ILibrary
+
   export default repeater
 }
