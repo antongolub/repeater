@@ -1,4 +1,4 @@
-import repeater from '../../main/js/repeater'
+import { createRepeater as repeater } from '../../main/js/repeater'
 
 describe('repeater', () => {
   it('properly wraps target', () => {

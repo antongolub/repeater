@@ -21,7 +21,7 @@ import type {
  * @property {Array<*>} [args] arguments of the last invocation
  * @property {number} [timeout] TimeoutID
  */
-export default function createRepeater (target: ITarget, delay: number, context: ?IAny, limit?: ?ILimit): IRepeater {
+export function createRepeater (target: ITarget, delay: number, context: ?IAny, limit?: ?ILimit): IRepeater {
   if (typeof target === 'object') {
     const { target: _target, delay, context, limit }: IOpts = target
 

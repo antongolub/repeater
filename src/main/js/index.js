@@ -1,7 +1,7 @@
 // @flow
 
-import repeater from './repeater'
+import { createRepeater } from './repeater'
 
-export default repeater
+export default createRepeater
 
-export { repeater }
+export { createRepeater, createRepeater as repeater }
