@@ -30,7 +30,7 @@ export default function createRepeater (target: ITarget, delay: number, context:
 
   assert(target, delay)
 
-  const repeater = (...args): IAny => {
+  const repeater: IRepeater = (...args: any[]): IAny => {
     const { timeout, target, limit, context }: IRepeater = repeater
     const nextLimit = getNextLimit(limit)
 
