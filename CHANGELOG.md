@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/antongolub/repeater/compare/v1.5.0...v1.5.1) (2022-11-30)
+
+
+### Bug Fixes
+
+* fix TS types ([039d003](https://github.com/antongolub/repeater/commit/039d0034e6994e7f8840f6a720a8aa37f27b70ed))
+
 # [1.5.0](https://github.com/antongolub/repeater/compare/v1.4.1...v1.5.0) (2022-11-30)
 
 
