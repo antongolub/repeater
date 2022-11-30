@@ -1,3 +1,20 @@
+# [1.5.0](https://github.com/antongolub/repeater/compare/v1.4.1...v1.5.0) (2022-11-30)
+
+
+### Bug Fixes
+
+* fix eslint peers ([83c941b](https://github.com/antongolub/repeater/commit/83c941ba71e74700f594d5040b4704b78629411c))
+
+
+### Features
+
+* provide named exports ([6cffcd1](https://github.com/antongolub/repeater/commit/6cffcd1af0e5c8680f0d7bf6fb74e10c687b2f28))
+
+
+### Performance Improvements
+
+* update deps ([25c0b7a](https://github.com/antongolub/repeater/commit/25c0b7af6e6e33ed2f88911262d84944632fcf25))
+
 ## [1.4.1](https://github.com/antongolub/repeater/compare/v1.4.0...v1.4.1) (2021-08-19)
 
 
