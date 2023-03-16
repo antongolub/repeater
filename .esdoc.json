@@ -1,10 +1,7 @@
 {
   "source": "./src",
   "destination": "./docs",
-
-  "ignore": [
-
-  ],
+  "ignore": [],
   "plugins": [
     {"name": "esdoc-flow-plugin"},
     {"name": "esdoc-standard-plugin"},
