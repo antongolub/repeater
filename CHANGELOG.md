@@ -1,3 +1,8 @@
+## [1.5.2](https://github.com/antongolub/repeater/compare/v1.5.1...v1.5.2) (2023-03-16)
+
+### Fixes & improvements
+* docs: update CI badge ([1c52cda](https://github.com/antongolub/repeater/commit/1c52cda6c04c1af4762508468272f5ca599b8165))
+
 ## [1.5.1](https://github.com/antongolub/repeater/compare/v1.5.0...v1.5.1) (2022-11-30)
 
 
