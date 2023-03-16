@@ -1,11 +1,10 @@
-# repeater
+# @antongolub/repeater
 > Helper for creating auto-calling functions
 
-[![Build Status](https://app.travis-ci.com/antongolub/repeater.svg?branch=master)](https://app.travis-ci.com/antongolub/repeater)
-[![npm (tag)](https://img.shields.io/npm/v/@antongolub/repeater/latest.svg)](https://www.npmjs.com/package/@antongolub/repeater)
+[![CI](https://github.com/antongolub/repeater/actions/workflows/ci.yaml/badge.svg)](https://github.com/antongolub/repeater/actions/workflows/ci.yaml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c63a84dc4cda2e67e2c3/maintainability)](https://codeclimate.com/github/antongolub/repeater/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c63a84dc4cda2e67e2c3/test_coverage)](https://codeclimate.com/github/antongolub/repeater/test_coverage)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+[![npm (tag)](https://img.shields.io/npm/v/@antongolub/repeater/latest.svg)](https://www.npmjs.com/package/@antongolub/repeater)
 
 ## Motivation
 The wheel was invented a long time ago: [repeat](https://www.npmjs.com/package/repeat).
